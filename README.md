@@ -1,5 +1,7 @@
 # TP5-conception-logicielle
 
+![](https://raw.githubusercontent.com/AlexandreBidon/Funky-Horse/main/out/line.png)
+
 ## How to start
 
 ### Dependencies
@@ -11,6 +13,7 @@ To run the API you have to run the file `__main__.py` at the root. You will have
 
 You can use the file `info.log` to debug.
 
+![](https://raw.githubusercontent.com/AlexandreBidon/Funky-Horse/main/out/line.png)
 ## How to use
 
 ### Search by id
@@ -21,9 +24,13 @@ You can search by id using `/search_id=`. The API returns the JSON doc directly 
 
 You can use `/is_vegan_id=` to check if a product is made from vegan ingredients.
 
+![](https://raw.githubusercontent.com/AlexandreBidon/Funky-Horse/main/out/line.png)
 ## Sources
 
 OpenFoodFacts API : [lien](https://openfoodfacts.github.io/api-documentation/#1GeneralInformation)
+
+![](https://raw.githubusercontent.com/AlexandreBidon/Funky-Horse/main/out/line.png)
+
 ## TODO
 
 Add some tests
