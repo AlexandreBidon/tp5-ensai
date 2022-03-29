@@ -2,4 +2,4 @@
 
 ## How to start
 
-To run the API you have to run the file `main.py` in the tp5-ensai folder.
+To run the API you have to run the file `__main__.py` at the root.
