@@ -1,4 +1,4 @@
-from tp5.webservice import APISetup
+from tp5.webservice.APISetup import APISetup
 import uvicorn
 import logging
 
