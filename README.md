@@ -9,6 +9,8 @@ First, make sure to install the dependencies using `pip install -r requirements.
 
 To run the API you have to run the file `__main__.py` at the root. You will have the address of the local server.
 
+You can use the file `info.log` to debug.
+
 ## How to use
 
 ### Search by id
