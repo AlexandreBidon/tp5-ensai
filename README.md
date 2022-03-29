@@ -18,3 +18,10 @@ You can search by id using `/search_id=`. The API returns the JSON doc directly 
 ### Is Vegan by id
 
 You can use `/is_vegan_id=` to check if a product is made from vegan ingredients.
+
+## Sources
+
+OpenFoodFacts API : [lien](https://openfoodfacts.github.io/api-documentation/#1GeneralInformation)
+## TODO
+
+Add some tests
