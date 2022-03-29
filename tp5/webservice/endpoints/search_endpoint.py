@@ -15,4 +15,17 @@ class SearchEndpoint():
     """
 
     def __init__(self):
-        self.__search_engine = SearchEngine()
+        pass
+
+    def search_id(self, query):
+        try:
+            requete = requests.get(
+                "https://world.openfoodfacts.org/api/v0/product/{query}.json".format(query=query))
+            logging.info(
+                "Searched on : https://world.openfoodfacts.org/api/v0/product/{query}.json".format(query=query))
+        except Exception as e:
+            logging.error(traceback.format_exc())
+            # Logs the error appropriately.
+            raise HTTPException(
+                status_code=444, detail='An exception occurred with a Search Source: {}'.format(e))
+        return requete.json()

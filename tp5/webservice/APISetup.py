@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from tp5.webservice.endpoints.search_endpoint import SearchEndpoint
 
 
 class APISetup():
@@ -9,11 +10,12 @@ class APISetup():
 
     def __init__(self):
         self.app = FastAPI()
+        self.searchendpoint = SearchEndpoint()
 
         @self.app.get("/")
         async def root():
             return {"message": "Hello World"}
 
-        @self.app.get("/search={query}")
+        @self.app.get("/search_id={query}")
         async def search_str(query: str):
-            return {"message": query}
+            return (self.searchendpoint.search_id(query))
