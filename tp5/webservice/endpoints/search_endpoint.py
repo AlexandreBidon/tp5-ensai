@@ -4,7 +4,7 @@ import traceback
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from fastapi import FastAPI, HTTPException
-
+from fastapi.responses import FileResponse
 
 class SearchEndpoint():
     """
@@ -44,6 +44,7 @@ class SearchEndpoint():
         for ingredient in requete.json()["product"]["ingredients"]:
             logging.info(ingredient)
             if "vegan" in ingredient:
-                if ingredient["vegan"] != "no":
+                if ingredient["vegan"] != "yes":
                     return False
         return True
+

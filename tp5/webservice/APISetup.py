@@ -21,5 +21,5 @@ class APISetup():
             return (self.searchendpoint.search_id(query))
 
         @self.app.get("/is_vegan_id={query}")
-        async def is_vegan_str(query: str):
-            return (self.searchendpoint.is_vegan_id(query))
+        async def is_vegan_id(query: str):
+            return {"isVegan": self.searchendpoint.is_vegan_id(query)}
