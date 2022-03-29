@@ -29,3 +29,21 @@ class SearchEndpoint():
             raise HTTPException(
                 status_code=444, detail='An exception occurred with a Search Source: {}'.format(e))
         return requete.json()
+
+    def is_vegan_id(self, query):
+        try:
+            requete = requests.get(
+                "https://world.openfoodfacts.org/api/v0/product/{query}.json".format(query=query))
+            logging.info(
+                "Searched on : https://world.openfoodfacts.org/api/v0/product/{query}.json".format(query=query))
+        except Exception as e:
+            logging.error(traceback.format_exc())
+            # Logs the error appropriately.
+            raise HTTPException(
+                status_code=444, detail='An exception occurred with a Search Source: {}'.format(e))
+        for ingredient in requete.json()["product"]["ingredients"]:
+            logging.info(ingredient)
+            if "vegan" in ingredient:
+                if ingredient["vegan"] != "no":
+                    return False
+        return True
